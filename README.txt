@@ -29,3 +29,5 @@ Per eseguire la shell, utilizzare il comando:
 
 Note
 Questo progetto è un esempio di come implementare una shell in C. Non include tutte le funzionalità di una shell completa e non è destinato ad essere utilizzato in un ambiente di produzione.
+
+IMPORTANTE a causa dell'uso della libreria sys/wait è necessario eseguire il codice in ambiente LINUX non funziona su windows 
