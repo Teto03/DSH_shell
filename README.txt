@@ -1,33 +1,32 @@
-dsh - Una semplice shell in C
-Questo progetto è una semplice implementazione di una shell in linguaggio C. Il codice include funzionalità di base come l'esecuzione di comandi, la gestione dei percorsi, la ridirezione dell'output e l'uso di pipe.
+dsh.C  A Simple Shell in C
+This project is a straightforward implementation of a shell in the C programming language. The code includes basic functionalities such as executing commands, managing paths, redirecting output, and using pipes.
 
-Funzionalità
-Esecuzione di comandi: la shell può eseguire comandi specificati nel percorso.
-Gestione dei percorsi: è possibile impostare il percorso di ricerca dei comandi utilizzando il comando setpath.
-Ridirezione dell'output: la shell supporta la ridirezione dell'output utilizzando i simboli > e >>.
-Pipe: la shell supporta l'uso di pipe con il simbolo |.
-Struttura del codice
-Il codice è strutturato in diverse funzioni, ognuna delle quali gestisce una specifica funzionalità della shell:
+Features
+Command Execution: The shell can execute commands specified within the path.
+Path Management: It is possible to set the command search path using the setpath command.
+Output Redirection: The shell supports output redirection using the symbols > and >>.
+Pipes: The shell supports the use of pipes with the | symbol.
+Code Structure
+The code is organized into several functions, each handling a specific functionality of the shell:
 
-panic: stampa un messaggio di errore e termina l'esecuzione.
-prompt: stampa il prompt della shell e legge l'input dell'utente.
-set_path: imposta il percorso di ricerca dei comandi.
-path_lookup: cerca un comando nel percorso specificato.
-rel2abs: converte un percorso relativo in un percorso assoluto.
-do_redir: gestisce la ridirezione dell'output.
-do_pipe: gestisce l'uso di pipe.
-do_exec: esegue un comando.
-main: funzione principale che gestisce il ciclo di vita della shell.
-Come compilare ed eseguire
-Per compilare il codice, utilizzare il comando gcc:
+panic: Prints an error message and terminates execution.
+prompt: Displays the shell prompt and reads user input.
+set_path: Sets the search path for commands.
+path_lookup: Searches for a command within the specified path.
+rel2abs: Converts a relative path into an absolute path.
+do_redir: Handles output redirection.
+do_pipe: Manages the use of pipes.
+do_exec: Executes a command.
+main: The main function that governs the shell's lifecycle.
 
-$gcc -o dsh dsh.c
+How to Compile and Run
+To compile the code, use the following gcc command:
+  $ gcc -o dsh dsh.c  
 
-Per eseguire la shell, utilizzare il comando:
+To execute the shell, use the command:
+   $ ./dsh  
 
-./dsh
+Notes
+This project serves as an example of how to implement a shell in C. It does not include all the features of a full-fledged shell and is not intended for production use.
 
-Note
-Questo progetto è un esempio di come implementare una shell in C. Non include tutte le funzionalità di una shell completa e non è destinato ad essere utilizzato in un ambiente di produzione.
-
-IMPORTANTE a causa dell'uso della libreria sys/wait è necessario eseguire il codice in ambiente LINUX non funziona su windows 
+IMPORTANT: Due to the use of the sys/wait library, the code must be executed in a LINUX environment. It will not function on Windows.
